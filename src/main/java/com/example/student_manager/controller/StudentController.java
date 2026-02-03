@@ -31,16 +31,25 @@ public class StudentController {
     public List<StudentResponseDTO> getAllStudents(){
         return service.getAllStudents();
     }
-
     @PutMapping("/update/{id}")
-    public StudentModel updateStudent(@PathVariable String id, @RequestBody StudentModel student){
+
+    public StudentResponseDTO updateStudent(@PathVariable String id,@RequestBody StudentResponseDTO student){
         return service.updateStudent(id,student);
     }
-
     @DeleteMapping("/delete/{id}")
     public void delete(@PathVariable String id){
-        service.deleteStudent(id);
-
+        service.delete(id);
     }
+
+//    @PutMapping("/update/{id}")
+//    public StudentModel updateStudent(@PathVariable String id, @RequestBody StudentModel student){
+//        return service.updateStudent(id,student);
+//    }
+//
+//    @DeleteMapping("/delete/{id}")
+//    public void delete(@PathVariable String id){
+//        service.deleteStudent(id);
+//
+//    }
 
 }
