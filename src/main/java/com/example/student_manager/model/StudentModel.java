@@ -1,14 +1,12 @@
 package com.example.student_manager.model;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.web.bind.annotation.RestController;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
-@RestController
 @NoArgsConstructor
 @Document(collection="students")
 
